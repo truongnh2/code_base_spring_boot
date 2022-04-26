@@ -37,7 +37,6 @@ public class IhrpController {
 	// lấy tất cả thông tin nhân viên có sự thay đổi từ ihrp
 	@GetMapping("/")
 	public ResponseEntity<Iterable<Employee>> getAllEmployee(){
-		System.out.println("aaa");
 		return new ResponseEntity<>(employeeService.findAll(), HttpStatus.OK);
 	}
 	// lấy thông tin chỉ 1 nhân viên có sự thay đổi từ ihrp theo mã nhân viên

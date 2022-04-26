@@ -3,13 +3,11 @@
  */
 package mic.vn.synchronize.model;
 
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -29,22 +27,23 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "employee")
-public class Employee {
+@Table(name = "work_processes")
+public class WorkProcesses {
 	@Id
+	@Column(name = "id")
+	private String id;
+	
 	@Column(name = "ma_nv")
 	private String maNv;
 	
-	@Column(name = "ho_ten")
-	private String hoTen;
+	@Column(name = "don_vi_cu")
+	private String donViCu;
 	
-	@Column(name = "gioi_tinh")
-	private String gioiTinh;
-	
-	@Column(name = "dia_chi")
-	private String diaChi;
+	@Column(name = "don_vi_moi")
+	private String donViMoi;
 	
 	@Column(name = "trang_thai")
 	private int trangThai;
+	
 
 }
